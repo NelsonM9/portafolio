@@ -29,7 +29,7 @@
 
 [data-theme="dark"] {
     --primary-color: #1b1b1b;
-    --secondary-color: #bb86fc;
+    --secondary-color: #2496ED;
     --background-color: #272727;
     --text-color: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.5);
@@ -75,6 +75,9 @@ header {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-buttons {
@@ -214,6 +217,7 @@ section {
 }
 
 .gitlab-link i {
+    padding-top: 5%;
     margin-right: 8px;
 }
 
@@ -230,7 +234,6 @@ button#theme-toggle {
     color: var(--text-color);
     font-size: 1.2em;
     cursor: pointer;
-    position: absolute; /* Posicionamos el botón absolutamente dentro del header */
     top: 20px;
     right: 20px;
     display: flex;
@@ -246,7 +249,6 @@ button#theme-toggle .icon {
     width: 50%;
     text-align: center;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    position: absolute;
     top: 0;
     height: 100%;
     display: flex;
