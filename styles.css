@@ -1,0 +1,398 @@
+/* styles.css */
+:root {
+    --primary-color: #008080;
+    --secondary-color: #ffffff;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --color-button-theme: #20c2c2;
+
+    --js-color: #F7E02B; /* Amarillo para JavaScript */
+    --python-color: #306998; /* Azul oscuro para Python */
+    --django-color: #083524; /* Verde oscuro para Django */
+    --fastapi-color: #009688; /* Verde para FastAPI */
+    --flask-color: #6C6D6E; /* Gris para Flask */
+    --mysql-color: #00758F; /* Azul para MySQL */
+    --mongodb-color: #47A248; /* Verde para MongoDB */
+    --docker-color: #2496ED; /* Azul para Docker */
+    --html-color: #E34F26; /* Rojo para HTML */
+    --css-color: #264DE4; /* Azul para CSS */
+    --git-color: #F05032; /* Rojo para Git */
+    --github-color: #181717; /* Negro para GitHub */
+    --gitlab-color: #FCA121; /* Naranja para GitLab */
+    --aws-color: #FF9900; /* Naranja para AWS */
+    --scrum-color: #F7E02B; /* Amarillo para Scrum */
+    --jira-color: #0052CC; /* Azul para Jira */
+    --trello-color: #0079BF; /* Azul para Trello */
+    --xano-color: #0070F3; /* Azul para XANO */
+}
+
+[data-theme="dark"] {
+    --primary-color: #1b1b1b;
+    --secondary-color: #bb86fc;
+    --background-color: #272727;
+    --text-color: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --color-button-theme: #6C6D6E;
+
+    --js-color: #F7E02B;
+    --python-color: #306998;
+    --django-color: #083b28;
+    --fastapi-color: #009688;
+    --flask-color: #6C6D6E;
+    --mysql-color: #00758F;
+    --mongodb-color: #47A248;
+    --docker-color: #2496ED;
+    --html-color: #E34F26;
+    --css-color: #264DE4;
+    --git-color: #F05032;
+    --github-color: #181717;
+    --gitlab-color: #FCA121;
+    --aws-color: #FF9900;
+    --scrum-color: #F7E02B;
+    --jira-color: #0052CC;
+    --trello-color: #0079BF;
+    --xano-color: #0070F3;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header, nav, section, footer {
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+button:hover {
+    color: var(--secondary-color);
+}
+
+#language-toggle {
+    position: relative;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.icon {
+    display: none;
+}
+
+section {
+    margin: 20px 0;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px ;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 2px solid #0A032B;
+}
+
+
+.project {
+    margin: 20px 0;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    padding: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el contenido horizontalmente */
+}
+
+.project-content h3 {
+    margin-top: 0;
+}
+
+.project-content p {
+    margin: 10px 0;
+}
+
+.project-content .tech-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Centrar los iconos horizontalmente */
+    gap: 10px;
+}
+
+.tech-container {
+    margin-top: 10px;
+}
+
+.tech-container p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.tech-icons {
+    display: flex;
+    justify-content: center; /* Centramos los iconos */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tech-icons i {
+    font-size: 1.5em;
+}
+
+.tech-icons .fa-python {
+    color: var(--python-color);
+}
+
+.tech-icons .fa-flask {
+    color: var(--flask-color);
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #0A032B;
+}
+
+.gitlab-link {
+    text-decoration: none;
+    color: #FC6D26;
+    font-size: 2.6em;
+    width: 70%;
+}
+
+.gitlab-link i {
+    margin-right: 8px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    color: #888;
+}
+
+button#theme-toggle {
+    background-color: var(--color-button-theme);
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    color: var(--text-color);
+    font-size: 1.2em;
+    cursor: pointer;
+    position: absolute; /* Posicionamos el botón absolutamente dentro del header */
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+button#theme-toggle .icon {
+    width: 50%;
+    text-align: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button#theme-toggle .sun-icon {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+button#theme-toggle .moon-icon {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+[data-theme="dark"] #theme-toggle .sun-icon {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+[data-theme="dark"] #theme-toggle .moon-icon {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.skills-category {
+    margin: 20px 0;
+}
+
+.skills-category h3 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.skills-category ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.skills-category ul li {
+    margin: 5px 0;
+}
+
+.skills-category i {
+    margin-right: 10px;
+}
+
+.skills-category .fa-js {
+    color: var(--js-color);
+}
+
+.skills-category .fa-python {
+    color: var(--python-color);
+}
+
+.skills-category .fa-django {
+    color: var(--django-color);
+}
+
+.skills-category .fa-cloud {
+    color: var(--fastapi-color);
+}
+
+.skills-category .fa-flask {
+    color: var(--flask-color);
+}
+
+.skills-category .fa-database {
+    color: var(--mysql-color);
+}
+
+.skills-category .fa-database:last-child {
+    color: var(--mongodb-color);
+}
+
+.skills-category .fa-docker {
+    color: var(--docker-color);
+}
+
+.skills-category .fa-html5 {
+    color: var(--html-color);
+}
+
+.skills-category .fa-css3-alt {
+    color: var(--css-color);
+}
+
+.skills-category .fa-git {
+    color: var(--git-color);
+}
+
+.skills-category .fa-github {
+    color: var(--github-color);
+}
+
+.skills-category .fa-gitlab {
+    color: var(--gitlab-color);
+}
+
+.skills-category .fa-aws {
+    color: var(--aws-color);
+}
+
+.skills-category .fa-tachometer-alt {
+    color: var(--scrum-color);
+}
+
+.skills-category .fa-jira {
+    color: var(--jira-color);
+}
+
+.skills-category .fa-trello {
+    color: var(--trello-color);
+}
+
+.skills-category .fa-cogs {
+    color: var(--xano-color);
+}
+
+.contact-item {
+    margin: 20px 0;
+    font-size: 1.5em;
+}
+
+.contact-item i {
+    margin-right: 10px;
+}
+
+.contact-item .fa-linkedin {
+    color: #0077B5; /* Azul para LinkedIn */
+}
+
+.contact-item .fa-envelope {
+    color: #D44638; /* Rojo para Email */
+}
+
+.contact-item .fa-phone {
+    color: #34b7f1; /* Azul claro para Teléfono */
+}
+
+.contact-item p {
+    margin: 5px 0 0 0;
+    font-size: 1em;
+    color: var(--text-color);
+}
